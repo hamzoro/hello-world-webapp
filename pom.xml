@@ -27,8 +27,6 @@
             <username>jboss</username>
             <password>jboss2014</password>
             <name>xyz</name>
-            <filename>xyz.war</filename>
-            <skip>true</skip>
         </configuration>
         <executions>
             <execution>
