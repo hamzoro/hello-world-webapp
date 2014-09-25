@@ -16,6 +16,30 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>xyz</finalName>
+  
+  <plugin>
+        <groupId>org.jboss.as.plugins</groupId>
+        <artifactId>jboss-as-maven-plugin</artifactId>
+        <version>7.1.1.Final</version>
+        <configuration>
+            <hostname>127.0.0.1</hostname>
+            <port>9999</port>
+            <username>jboss</username>
+            <password>jboss2014</password>
+            <name>xyz</name>
+            <filename>xyz.war</filename>
+            <skip>true</skip>
+        </configuration>
+        <executions>
+            <execution>
+                <id>deploy-jar</id>
+                <phase>install</phase>
+                <goals>
+                    <goal>deploy</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+  
   </build>
 </project>
