@@ -26,11 +26,9 @@
             <port>9999</port>
             <username>jboss</username>
             <password>jboss2014</password>
-            <name>xyz</name>
         </configuration>
         <executions>
             <execution>
-                <id>deploy-jar</id>
                 <phase>install</phase>
                 <goals>
                     <goal>deploy</goal>
