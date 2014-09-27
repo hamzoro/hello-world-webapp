@@ -16,6 +16,33 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 </dependency>
 </dependencies>
 <build>
-<finalName>xyz</finalName>
+<plugins>
+<plugin>
+  <groupId>org.codehaus.cargo</groupId>
+  <artifactId>cargo-maven2-plugin</artifactId>
+  <version>1.1.4</version>
+  <fileName>xyz</fileName>
+  <configuration>
+    <container>
+      <containerId>jboss7x</containerId>
+      <type>remote</type>
+    </container>
+    <configuration>
+      <type>runtime</type>
+      <properties>
+        <cargo.hostname>127.0.0.1</cargo.hostname>
+        <cargo.jboss.management-native.port>9999</cargo.jboss.management-native.port>
+      </properties>
+    </configuration>
+  </configuration>
+  <dependencies>
+    <dependency>
+      <groupId>org.jboss.as</groupId>
+      <artifactId>jboss-as-controller-client</artifactId>
+      <version>7.1.1.Final</version>
+    </dependency>
+  </dependencies>
+</plugin>
+</plugins>
 </build>
 </project>
