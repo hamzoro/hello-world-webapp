@@ -1,51 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.kohsuke.test</groupId>
-  <artifactId>xyz</artifactId>
-  <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>xyz Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-   <plugins>
-
-    
-    
-    <plugin>
-  <groupId>org.codehaus.cargo</groupId>
-  <artifactId>cargo-maven2-plugin</artifactId>
-   <version>1.4.2</version>
-  <configuration>
-    <container>
-      <containerId>jboss7x</containerId>
-      <type>remote</type>
-    </container>
-    <configuration>
-      <type>runtime</type>
-      <properties>
-        <cargo.hostname>localhost</cargo.hostname>
-        <cargo.jboss.management-native.port>9999</cargo.jboss.management-native.port>
-      </properties>
-    </configuration>
-  </configuration>
-  <dependencies>
-    <dependency>
-      <groupId>org.jboss.as</groupId>
-      <artifactId>jboss-as-controller-client</artifactId>
-      <version>7.1.1.Final</version>
-    </dependency>
-  </dependencies>
-</plugin>
-
-   </plugins>
-  </build>
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>org.kohsuke.test</groupId>
+<artifactId>xyz</artifactId>
+<packaging>war</packaging>
+<version>1.0-SNAPSHOT</version>
+<name>xyz Maven Webapp</name>
+<url>http://maven.apache.org</url>
+<dependencies>
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>3.8.1</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
+<build>
+<finalName>xyz</finalName>
+</build>
 </project>
